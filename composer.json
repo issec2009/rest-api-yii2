@@ -2,7 +2,7 @@
     "name": "issec2009/rest-api-yii2",
     "description": "Simple rest api example for yii2",
     "type": "yii2-extension",
-    "keywords": ["yii2","extension","rest api"],
+    "keywords": ["yii2","extension","rest","api"],
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "issec2009\\api\\": ""
+            "issec2009\\api\\": "src"
         }
     }
 }
