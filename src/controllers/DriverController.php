@@ -2,15 +2,14 @@
 
 namespace issec2009\api\controllers;
 
-use app\models\Bus;
-use app\models\Driver;
-use app\models\DriverBus;
+use issec2009\api\models\Bus;
+use issec2009\api\models\Driver;
 use Yii;
 use yii\rest\ActiveController;
 
-class ApiDriverController extends ActiveController
+class DriverController extends ActiveController
 {
-    public $modelClass = 'app\models\Driver';
+    public $modelClass = 'issec2009\api\models\Driver';
     public $response = ['status' => false, 'error' => '', 'data' => ''];
 
     public function actions()

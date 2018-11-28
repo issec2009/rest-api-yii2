@@ -14,7 +14,7 @@ class Api extends \yii\base\Module implements BootstrapInterface
      */
     public $controllerNamespace = 'issec2009\api\controllers';
 //    public $defaultRoute = 'api-driver';
-    public $defaultController = 'api-driver';
+    public $defaultController = 'driver';
 
     /**
      * {@inheritdoc}
@@ -26,17 +26,14 @@ class Api extends \yii\base\Module implements BootstrapInterface
         // custom initialization code goes here
     }
 
-//    public function bootstrap($app)
-//    {
-////        $app->getUrlManager()->addRules([
-////            [
-////                'class' => 'yii\rest\UrlRule',
-////                'controller' => ['api-driver'],
-////            ]
-////        ], false);
-//
-//        if ($app instanceof \yii\console\Application) {
-//            $this->controllerNamespace = 'issec2009\api\commands';
-//        }
-//    }
+    public function bootstrap($app)
+    {
+        $app->getUrlManager()->addRules([
+            ['class' => 'yii\rest\UrlRule', 'controller' => ['api/driver']],
+        ], false);
+
+        if ($app instanceof \yii\console\Application) {
+            $this->controllerNamespace = 'issec2009\api\commands';
+        }
+    }
 }
